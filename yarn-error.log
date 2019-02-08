@@ -1,0 +1,47 @@
+Arguments: 
+  /Users/coreycosman/.nvm/versions/node/v9.2.0/lib/node_modules/node/bin/node /Users/coreycosman/.yarn/bin/yarn.js start
+
+PATH: 
+  /Users/coreycosman/.yarn/bin:/Users/coreycosman/.config/yarn/global/node_modules/.bin:/usr/local/opt/qt@5.5/bin:/Users/coreycosman/.rbenv/shims:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/coreycosman/.nvm/versions/node/v9.2.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Users/coreycosman/.rvm/bin
+
+Yarn version: 
+  1.13.0
+
+Node version: 
+  11.3.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/coreycosman/digitalmate/backend/package.json: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at /Users/coreycosman/.yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/Users/coreycosman/.yarn/lib/cli.js:304:30)
+      at /Users/coreycosman/.yarn/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "digitalmate-backendAPI",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "coreycosman <cosman.corey@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+      "r": "nodemon server/server.js -e js,hbs",
+      "t": "export NODE_ENV=test && nodemon --exec 'mocha test/**/*.test.js'",
+      "d": "nodemon --inspect-brk server/server.js",
+      "dt": "npm run t -- --inspect-brk",
+      "ds": "nodemon inspect server/server.js",
+      "start": "node server/server.js"
+    },
+    "engines": {
+    "node": "9.2.0"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
