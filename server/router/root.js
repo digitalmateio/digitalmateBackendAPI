@@ -7,9 +7,9 @@
 
 const routes = [
   {
-    name: "/test",
-    middleware: "./test-route"
-  }
+    name: '/users',
+    middleware: './user-routes',
+  },
 ];
 
 module.exports = app => {

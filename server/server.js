@@ -1,14 +1,14 @@
 // IMPORTS:
 // Library:
-const express = require("express");
-const fs = require("fs");
-const path = require("path");
-const morgan = require("morgan");
-const bodyParser = require("body-parser");
+const express = require('express');
+const fs = require('fs');
+const path = require('path');
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
 
-// Local
+// Local:
 
-require("./config/config");
+require('./config/config');
 
 // ___________________________
 
@@ -17,32 +17,33 @@ const app = express();
 // ___________________________
 
 // MONGOOSE CONFIG:
-const { mongoose } = require("./db/mongoose");
+const { mongoose } = require('./db/mongoose');
 console.log(process.env.MONGODB_URI);
 
+// ___________________________
+
 // CONTROLLER CONFIG:
-const todosController = require("./controllers/todos-controller");
-const usersController = require("./controllers/users-controller");
+const todosController = require('./controllers/todos-controller');
+const usersController = require('./controllers/users-controller');
 
-const router = require("./router/root");
-router(app);
-// const { testeroni } = require("./controllers/tests-controllers");
-// const testRoute = require("./router/test-route");
-// console.log(testRoute);
-// const router = express.Router();
-
-// router.route("/test").get(testeroni);
-// app.use("/test", testRoute);
 // ___________________________
 
 // MIDDLEWARE:
-app.use(morgan("combined"));
+
+app.use(morgan('combined'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // ___________________________
 
-// PORT:
+// ROUTER CONFIG:
+
+const router = require('./router/root');
+router(app);
+
+// ___________________________
+
+// PORT CONFIG:
 
 const port = process.env.PORT;
 app.listen(port, () => {
