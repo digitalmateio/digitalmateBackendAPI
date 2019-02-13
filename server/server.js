@@ -1,4 +1,5 @@
 // IMPORTS:
+
 // Library:
 const express = require('express');
 const fs = require('fs');
@@ -12,7 +13,7 @@ require('./config/config');
 
 // ___________________________
 
-// Server Setup
+// HTTP SERVER
 const app = express();
 // ___________________________
 
@@ -23,8 +24,8 @@ console.log(process.env.MONGODB_URI);
 // ___________________________
 
 // CONTROLLER CONFIG:
-const todosController = require('./controllers/todos-controller');
-const usersController = require('./controllers/users-controller');
+// const todosController = require('./controllers/todos-controller');
+// const usersController = require('./controllers/users-controller');
 
 // ___________________________
 
@@ -55,5 +56,3 @@ app.listen(port, () => {
 // EXPORTS:
 
 module.exports = { app };
-
-// ___________________________
