@@ -1,4 +1,5 @@
 // USER MODEL:
+
 // NOTE: use const for everything here for readablity
 // NOTE: add other mongoose elements to joi schema
 // NOTE: confirmation doesnt need to be stored - can be checked on frontend, research this
